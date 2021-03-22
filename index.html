@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+        <link rel="stylesheet" href="css/master.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script> 
+        <title>Document</title>
+
+    </head>
+    <body>
+            <div id="root" class="container">
+                <div class="logo">
+                    <img src="img\download.png" alt="boolean logo">
+                </div>
+
+                <div class="add_thing">
+                    <input v-model="newToDo" type="text" id="myText">
+                    <button @click="add"></button>
+                </div>
+                
+                
+                <div class="to_do">
+                    <ul class="list">
+                        <li v-for="(all, index) in toDo">
+                            {{all}}
+                            <i @click="remove(index)" class="fas fa-times" ></i>
+                        </li>
+                        
+
+                    </ul>
+                </div>
+            </div>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
